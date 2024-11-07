@@ -1,7 +1,15 @@
 package lotto;
 
+import lotto.controller.LottoController;
+import lotto.view.InputReader;
+import lotto.view.OutputWriter;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        InputReader inputReader = new InputReader();
+        OutputWriter outputWriter = new OutputWriter();
+        LottoController lottoController = new LottoController(inputReader,outputWriter);
+
+        lottoController.startLotto();
     }
 }
